@@ -6,7 +6,7 @@ const form = document.querySelector('form');
 const email = document.querySelector('input[name = email]');
 const textarea = document.querySelector('textarea[name = message]');
 
-const formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+let formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 const parsedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
 form.addEventListener('input', throttle(onInput, 500));
